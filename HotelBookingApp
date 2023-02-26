@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class HotelBookingApplication {
+    
+    public static void main(String[] args) {
+        
+        //Inputs
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+
+        String name = input.nextLine();
+
+        System.out.print("Enter number of nights: ");
+
+        int nights = input.nextInt();
+
+        System.out.print("Enter your age: ");
+
+        int age = input.nextInt();
+        
+        // Check if user is at least 18 years old
+        if (age < 18) {
+            System.out.println("Booking cannot be confirmed. You must be at least 18 years old.");
+        } else {
+            System.out.println("Sorry, but we can't confirm your booking. You must be 18 or older.");
+            // Calculate total cost and confirm booking
+            int totalCost = nights * 90;
+            System.out.println("Booking confirmed for " + name + ". Total cost is " + totalCost + " euro.");
+        }
+    }
+}
